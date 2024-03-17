@@ -86,12 +86,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="src\Format.h" />
     <ClInclude Include="src\Logger.h" />
     <ClInclude Include="src\HamLogger.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Format.cpp" />
     <ClCompile Include="src\Logger.cpp" />
     <ClCompile Include="src\HamLogger.cpp" />
   </ItemGroup>

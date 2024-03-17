@@ -4,25 +4,24 @@
 namespace HamLogger {
 	
 	//Constructors/Destructors
-	Logger::Logger(int ID) {
-		Logger::id = ID;
+	Logger::Logger() {
+
 	}
 
 	Logger::~Logger() {
-		std::cout << "Bye bye, logger " << id << std::endl;
+		std::cout << "Bye bye, logger" << std::endl;
 	}
 
-	//Setters
-	void Logger::SetFormat(Format newFormat) {
-		Logger::format = newFormat;
+	std::string Logger::LevelToString(LogLevel level) {
+		switch (level) {
+		case LogLevel::TRACE: return "TRACE";
+		case LogLevel::INFO: return "INFO";
+		case LogLevel::WARN: return "WARN";
+		case LogLevel::ERROR: return "ERROR";
+		}
 	}
 
-	//Getters
-	int Logger::GetID() {
-		return id;
-	}
-
-	String Logger::GetName() {
-		return name;
+	void Logger::Log(std::string message, LogLevel level) {
+		std::cout << LevelToString(level) << " | " << message << std::endl;
 	}
 }

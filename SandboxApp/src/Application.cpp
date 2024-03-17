@@ -3,11 +3,9 @@
 
 int main() {
 
-	HamLogger::Logger* logger = nullptr;
-	logger = HamLogger::NewLogger(2);
+	HamLogger::Logger logger;
+	logger.Log("Example Info.", HamLogger::LogLevel::INFO);
 	HamLogger::ExamplePrint();
-	std::cout << logger->GetID() << std::endl;
 
-	delete logger;
 	std::cin.get();
 }

@@ -1,30 +1,30 @@
 #pragma once
 #include <iostream>
 
-#include "Format.h"
-
-#define String std::string
-
 namespace HamLogger {
+	
+	enum LogLevel {
+		TRACE,
+		INFO,
+		WARN,
+		ERROR
+	};
+	
 	class Logger {
 	public:
 		//Constructors
-		Logger(int ID);
+		Logger();
 		~Logger();
 
-		//Setters
-		void SetFormat(Format newFormat);
-
-		//Getters
-		int GetID();
-		String GetName();
-
 		//Methods
-		void Output();
+		void Log(std::string message, LogLevel level);
 	private:
-		int id;
-		String name;
-		Format format;
+		//Private Attributes
+		std::string name;
+		LogLevel level;
+
+		//Private Methods
+		std::string LevelToString(LogLevel level);
 	};
 }
 
