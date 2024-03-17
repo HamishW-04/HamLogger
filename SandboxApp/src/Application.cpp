@@ -3,9 +3,10 @@
 
 int main() {
 
-	HamLogger::Logger logger;
-	logger.Log("Example Info.", HamLogger::LogLevel::INFO);
-	HamLogger::ExamplePrint();
+	HamLogger::Logger defaultLogger;
+	HamLogger::Logger myLogger("Hamish's Logger!");
+	defaultLogger.Log("Example Info.", HamLogger::LogLevel::INFO);
+	myLogger.Log("This is my own logger!", HamLogger::LogLevel::TRACE);
 
 	std::cin.get();
 }

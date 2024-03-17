@@ -14,6 +14,7 @@ namespace HamLogger {
 	public:
 		//Constructors
 		Logger();
+		Logger(std::string name);
 		~Logger();
 
 		//Methods
@@ -21,7 +22,6 @@ namespace HamLogger {
 	private:
 		//Private Attributes
 		std::string name;
-		LogLevel level;
 
 		//Private Methods
 		std::string LevelToString(LogLevel level);

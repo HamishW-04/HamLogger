@@ -5,7 +5,11 @@ namespace HamLogger {
 	
 	//Constructors/Destructors
 	Logger::Logger() {
+		name = "Default";
+	}
 
+	Logger::Logger(std::string name) {
+		Logger::name = name;
 	}
 
 	Logger::~Logger() {
@@ -22,6 +26,6 @@ namespace HamLogger {
 	}
 
 	void Logger::Log(std::string message, LogLevel level) {
-		std::cout << LevelToString(level) << " | " << message << std::endl;
+		std::cout << LevelToString(level) << " | " << name << " | " << message << std::endl;
 	}
 }

@@ -9,5 +9,5 @@ D:\Dev\Libraries\HamLogger\HamLogger\src\HamLogger.h(3,10): warning C4067: unexp
   (compiling source file 'src/Logger.cpp')
   
   Generating Code...
-D:\Dev\Libraries\HamLogger\HamLogger\src\Logger.cpp(22,1): warning C4715: 'HamLogger::Logger::LevelToString': not all control paths return a value
+D:\Dev\Libraries\HamLogger\HamLogger\src\Logger.cpp(26,1): warning C4715: 'HamLogger::Logger::LevelToString': not all control paths return a value
   HamLogger.vcxproj -> D:\Dev\Libraries\HamLogger\bin\Debugx64\HamLogger\HamLogger.lib
